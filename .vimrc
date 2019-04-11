@@ -85,3 +85,11 @@ set confirm " confirm :q in case of unsaved changes
 
 " Show file stats
 set ruler
+
+" Color theming
+set background=dark
+" solarized options 
+let g:solarized_visibility = "high"
+let g:solarized_contrast = "high"
+colorscheme solarized
+let g:solarized_termcolors=256
