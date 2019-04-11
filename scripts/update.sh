@@ -1,3 +1,4 @@
 #!/bin/bash
 git pull 
-./updateVimrc.sh
+~/dotfiles/scripts/update-vimrc.sh
+~/dotfiles/scripts/update-tmux.sh
