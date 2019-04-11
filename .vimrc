@@ -78,7 +78,6 @@ set textwidth=80 " wrap lines automatically at 80th column
 
 " syntax highlighting
 syntax enable " enable syntax highlighting
-"set background=dark " dark background for console
 
 " write settings
 set confirm " confirm :q in case of unsaved changes
@@ -87,9 +86,10 @@ set confirm " confirm :q in case of unsaved changes
 set ruler
 
 " Color theming
-set background=dark
 " solarized options 
-let g:solarized_visibility = "high"
-let g:solarized_contrast = "high"
+" let g:solarized_visibility = "high"
+" let g:solarized_contrast = "high"
+let g:solarized_termtrans = 1
+let g:solarized_termcolors=128
 colorscheme solarized
-let g:solarized_termcolors=256
+set background=dark
