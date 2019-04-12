@@ -73,12 +73,14 @@ let NERDTreeShowHidden=1
 " Show file stats
 set ruler
 
-" Color theming
+ set t_Co=256 " Explicitly tell vim that the terminal supports 256 colors
+"
+"Color theming
 " solarized options 
 " let g:solarized_visibility = "high"
 " let g:solarized_contrast = "high"
 let g:solarized_termtrans = 1
-let g:solarized_termcolors=128
+let g:solarized_termcolors=256
 colorscheme solarized
 set background=dark
 
@@ -121,7 +123,6 @@ set foldnestmax=10 " deepest fold is 10 levels
 set nofoldenable " don't fold by default
 set foldlevel=1
 
- set t_Co=256 " Explicitly tell vim that the terminal supports 256 colors
 
 " highlight conflicts
 match ErrorMsg '^\(<\|=\|>\)\{7\}\([^=].\+\)\?$'
