@@ -34,6 +34,8 @@ Plugin 'jiangmiao/auto-pairs'
 Plugin 'benmills/vimux'
 " enables repeating other supported plugins with the . command
 Plugin 'tpope/vim-repeat'
+" comment da tings
+Plugin 'tpope/vim-commentary'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -171,3 +173,9 @@ let g:NERDTreeIndicatorMapCustom = {
 " :W sudo saves the file 
 " Used to handle the permission denied errors
 command W w !sudo tee % > /dev/null
+
+map <Leader>mt :call VimuxRunCommand("clear; make test")<CR>
+map <Leader>mm :call VimuxRunCommand("clear; make")<CR>
+
+" close vim if NERDTree is the only thing open
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif

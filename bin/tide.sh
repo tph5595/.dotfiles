@@ -21,26 +21,15 @@ tmux send-keys "vim" C-m
 
 # Split pane 1 horizontal by 65%, start redis-server
 tmux splitw -v -p 5
-tmux send-keys "echo 1" C-m 
 
-# Select pane 2 
-tmux selectp -t 2
-# Split pane 2 vertiacally by 25%
-tmux splitw -h -p 50
-
-# select pane 3, set to api root
-tmux selectp -t 3
-tmux send-keys "echo 2" C-m 
-
-# select pane 3, set to api root
+# Select pane 1 
 tmux selectp -t 1
+# Split pane 1 vertiacally by 25%
 tmux splitw -h -p 5
-tmux send-keys "echo 3" C-m 
 
 # select pane 3, set to api root
-tmux selectp -t 4
-tmux splitw -v -p 50
-tmux send-keys "echo 4" C-m 
+tmux selectp -t 2
+tmux send-keys "vtop" C-m 
 
 # Select pane 1
 tmux selectp -t 1

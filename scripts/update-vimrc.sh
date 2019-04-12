@@ -1,4 +1,3 @@
 #!/bin/bash
-cp ~/.vimrc ~/.vimrc.back
-cp .vimrc ~/.vimrc
+cp ../vim/.vimrc ~/.vimrc
 vim +PluginInstall +qall
