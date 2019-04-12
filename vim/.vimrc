@@ -167,3 +167,7 @@ let g:NERDTreeIndicatorMapCustom = {
         \ 'Ignored'   : '☒',
         \ "Unknown"   : "?"
         \ }
+
+" :W sudo saves the file 
+" Used to handle the permission denied errors
+command W w !sudo tee % > /dev/null

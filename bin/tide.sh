@@ -13,24 +13,34 @@ session="dev"
 tmux start-server
 
 # create a new tmux session, starting vim from a saved session in the new window
-tmux new-session -d -s $session ide 
+tmux new-session -d -s $session -n tide 
 
 # Select pane 1, run vim
 tmux selectp -t 1 
 tmux send-keys "vim" C-m 
 
 # Split pane 1 horizontal by 65%, start redis-server
-tmux splitw -h -p 25
-tmux send-keys "ls" C-m 
+tmux splitw -v -p 5
+tmux send-keys "echo 1" C-m 
 
 # Select pane 2 
 tmux selectp -t 2
 # Split pane 2 vertiacally by 25%
-tmux splitw -v -p 50
+tmux splitw -h -p 50
 
 # select pane 3, set to api root
 tmux selectp -t 3
-tmux send-keys "top" C-m 
+tmux send-keys "echo 2" C-m 
+
+# select pane 3, set to api root
+tmux selectp -t 1
+tmux splitw -h -p 5
+tmux send-keys "echo 3" C-m 
+
+# select pane 3, set to api root
+tmux selectp -t 4
+tmux splitw -v -p 50
+tmux send-keys "echo 4" C-m 
 
 # Select pane 1
 tmux selectp -t 1
@@ -42,4 +52,4 @@ tmux new-window -t $session:1 -n scratch
 tmux select-window -t $session:0
 
 # Finished setup, attach to the tmux session!
-tmux attach-session -t $session
+tmux -2 attach-session -t $session 
