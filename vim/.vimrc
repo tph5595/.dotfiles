@@ -36,6 +36,9 @@ Plugin 'benmills/vimux'
 Plugin 'tpope/vim-repeat'
 " comment da tings
 Plugin 'tpope/vim-commentary'
+" Good markdown stuff <leader>e for code block editing with syntax highitng in
+" sepereate window
+Plugin 'gabrielelana/vim-markdown'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
