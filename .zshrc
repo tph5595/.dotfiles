@@ -102,3 +102,9 @@ alias ta='tmux attach'
 alias tls='tmux ls'
 alias tat='tmux attach -t'
 alias tns='tmux new-session -s'
+
+alias l='ls -lah'
+alias cl='clear && ls'
+
+export PATH=~/dotfiles/bin:$PATH
+
