@@ -180,5 +180,8 @@ command W w !sudo tee % > /dev/null
 map <Leader>mt :call VimuxRunCommand("clear; make test")<CR>
 map <Leader>mm :call VimuxRunCommand("clear; make")<CR>
 
+map <Leader>h :noh<CR>
+map <Leader>l <esc>G$
+
 " close vim if NERDTree is the only thing open
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
