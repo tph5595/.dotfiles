@@ -106,5 +106,5 @@ alias tns='tmux new-session -s'
 alias l='ls -lah'
 alias cl='clear && ls'
 
-export PATH=~/dotfiles/bin:$PATH
+export PATH=~/dotfiles/bin:~/secrets/bin:$PATH
 
