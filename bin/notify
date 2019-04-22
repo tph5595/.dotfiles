@@ -1,0 +1,12 @@
+#!/bin/bash
+
+x=""
+
+while read -t 1 a ; do x="$x $a" ; done
+
+if who | grep -wq $USER; then
+  echo "$x" | terminal-notifier -sound default
+  exit
+fi
+
+echo "$x" | text-me
