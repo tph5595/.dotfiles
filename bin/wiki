@@ -1,0 +1,2 @@
+#!/bin/bash
+mwiki () { echo $@ > foo; blah=`sed 's/ /_/g' foo`; dig +short txt $blah.wp.dg.cx; }
