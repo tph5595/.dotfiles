@@ -6,14 +6,16 @@ function auto-retry()
       false
       while [ $? -ne 0 ]; do
             echo attempting ssh
-            "$@" || (sleep 1; false) 
+            "$@" || ( sleep 1; false)
       done
                                     
 }
 
 if ! pgrep -f "sudo /usr/local/Cellar/openvpn"> /dev/null
 then
-      nohup sudo /usr/local/Cellar/openvpn/2.4.7/sbin/openvpn --config ~/secrets/keysclient.ovpn  &>/dev/null &
+      nohup sudo /usr/local/Cellar/openvpn/2.4.7/sbin/openvpn --config ~/secrets/keys/client.ovpn  &>/dev/null &
       echo connecting to server
+      sleep 5
 fi
-auto-retry ssh -q taylor@10.0.0.10 -i ~/secrets/keys/manjaro
+auto-retry ssh -q -o ConnectTimeout=1 taylor@10.0.0.10 -i ~/secrets/keys/manjaro
+echo connected
