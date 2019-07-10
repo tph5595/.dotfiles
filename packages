@@ -1,3 +1,3 @@
-vim tmux entr htop glances
+vim tmux entr htop glances evince pdflatex
 
-#for mac terminal-notifier
+#for mac terminal-notifier Caskroom/cask/mactex
