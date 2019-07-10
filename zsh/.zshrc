@@ -104,7 +104,8 @@ alias tat='tmux attach -t'
 alias tns='tmux new-session -s'
 
 alias l='ls -lah'
-alias cl='clear && ls'
+alias c='clear'
+alias cl=' && ls'
 
 export PATH=~/go/bin:~/dotfiles/bin:~/secrets/bin:$PATH
 export GOPATH=~/go
