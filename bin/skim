@@ -7,8 +7,8 @@ pdffile="${file%.tex}.pdf"
 
 # run pdflatex and bibtex, and open or reload the pdf  in Skim
 # && bibtex "${file}" && pdflatex "${file}" && pdflatex "${file}" && \
-pdflatex "${file}".tex  && biber "${file}" && pdflatex "${file}".tex &&
-pdflatex "${file}".tex && \
+pdflatex "${file}"  && biber "${file}" && pdflatex "${file}" &&
+pdflatex "${file}" && \
 /usr/bin/osascript << EOF
   set theFile to POSIX file "${pdffile}" as alias
   tell application "Skim"
