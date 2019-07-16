@@ -115,4 +115,5 @@ alias gpl='git pull'
 export PATH=~/go/bin:~/dotfiles/bin:~/secrets/bin:$PATH
 export GOPATH=~/go
 
-
+export VISUAL=vim
+export EDITOR="$VISUAL"
