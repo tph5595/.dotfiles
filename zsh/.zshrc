@@ -2,19 +2,13 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/taylor/.oh-my-zsh"
+export ZSH="/Users/taylor/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
-
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-# ZSH_THEME="robbyrussell"
-
-# https://github.com/romkatv/powerlevel10k
-# ZSH_THEME=powerlevel10k/powerlevel10k
-
-ZSH_THEME=agnoster
+ZSH_THEME="robbyrussell"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -27,7 +21,7 @@ ZSH_THEME=agnoster
 
 # Uncomment the following line to use hyphen-insensitive completion.
 # Case-sensitive completion must be off. _ and - will be interchangeable.
-HYPHEN_INSENSITIVE="true"
+# HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
@@ -42,7 +36,7 @@ HYPHEN_INSENSITIVE="true"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
+# ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
@@ -109,9 +103,16 @@ alias tls='tmux ls'
 alias tat='tmux attach -t'
 alias tns='tmux new-session -s'
 
-alias l='ls -lh'
+alias l='ls -lah'
 alias c='clear'
-alias cl='c; l'
+alias cl='c && ls'
+alias ga='git add'
+alias gc='git commit'
+alias gs='git status'
+alias gps='git push'
+alias gpl='git pull'
 
-export PATH=/opt/cuda/bin/:~/go/bin:~/dotfiles/bin:~/secrets/bin:$PATH
+export PATH=~/go/bin:~/dotfiles/bin:~/secrets/bin:$PATH
 export GOPATH=~/go
+
+
