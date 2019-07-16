@@ -7,14 +7,21 @@ pdffile="${file%.tex}.pdf"
 
 # run pdflatex and bibtex, and open or reload the pdf  in Skim
 # && bibtex "${file}" && pdflatex "${file}" && pdflatex "${file}" && \
-pdflatex "${file}"  && biber "${file}" && pdflatex "${file}" &&
-pdflatex "${file}" && \
-/usr/bin/osascript << EOF
+pdflatex "${file}"  && biber "${file}" && pdflatex "${file}" && pdflatex "${file}"
+
+if [ "$(uname)" == "Darwin" ]; then
+      /usr/bin/osascript << EOF
   set theFile to POSIX file "${pdffile}" as alias
   tell application "Skim"
   activate
   set theDocs to get documents whose path is (get POSIX path of theFile)
   if (count of theDocs) > 0 then revert theDocs
   open theFile
-  end tell
+end tell
 EOF
+elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
+      # Do something under GNU/Linux platform
+      echo nothing to do> /dev/null
+  fi
+
+
