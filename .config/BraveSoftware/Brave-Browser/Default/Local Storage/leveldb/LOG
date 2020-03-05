@@ -1,0 +1,6 @@
+2020/03/04-14:25:19.026 5d2b Reusing MANIFEST /home/taylor/.config/BraveSoftware/Brave-Browser/Default/Local Storage/leveldb/MANIFEST-000001
+2020/03/04-14:25:19.026 5d2b Recovering log #10
+2020/03/04-14:25:19.027 5d2b Reusing old log /home/taylor/.config/BraveSoftware/Brave-Browser/Default/Local Storage/leveldb/000010.log 
+2020/03/04-14:27:43.005 6902 Level-0 table #13: started
+2020/03/04-14:27:43.014 6902 Level-0 table #13: 15709 bytes OK
+2020/03/04-14:27:43.016 6902 Delete type=0 #10

@@ -1,0 +1,15 @@
+defaults
+auth	on
+tls	on
+tls_trust_file	/etc/ssl/certs/ca-certificates.crt
+logfile	~/.config/msmtp/msmtp.log
+
+account verizon-yahoo
+host smtp.mail.yahoo.com
+port 465
+from tph5595@verizon.net
+user tph5595@verizon.net
+passwordeval "pass mutt-wizard-verizon-yahoo"
+
+
+
