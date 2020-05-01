@@ -8,8 +8,7 @@ These are my dotfiles that I use for my workflow.
 For initial installtion
 
 ```bash
-./packages.sh
-./scripts/setup.sh
+sudo ./install.sh
 ```
 
 To enable automatic updates when your current branch changes
