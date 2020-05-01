@@ -2,4 +2,4 @@
 sudo apt install cmake zsh vim tmux entr htop python-pip evince pdflatex glibc-doc manpages-posix-dev pandoc zathura
 pip install glances jupyterlab
 
-#for_mac_terminal-notifier_Caskroom/cask/mactex
+#for mac terminal-notifier Caskroom/cask/mactex
