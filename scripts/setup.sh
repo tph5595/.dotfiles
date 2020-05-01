@@ -8,3 +8,6 @@ vim +PluginInstall +qall
 
 cd ~/.vim/bundle/YouCompleteMe
 ./install.py --clang-completer
+
+#setup zsh
+cp ../zsh/.zshrc ~/.zshrc
