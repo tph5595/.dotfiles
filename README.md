@@ -8,7 +8,7 @@ These are my dotfiles that I use for my workflow.
 For initial installtion
 
 ```bash
-apt install `cat packages`
+./packages.sh
 ./scripts/setup.sh
 ```
 
