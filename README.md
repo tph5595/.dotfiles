@@ -11,18 +11,6 @@ For initial installtion
 sudo ./install.sh
 ```
 
-To enable automatic updates when your current branch changes
-
-```bash
-./scripts/autoupdate.sh &
-```
-
-To manually pull updates
-
-```bash
-./scripts/pullUpdates.sh
-```
-
 ## minikube kvm2 setup arch
 
 https://www.techlear.com/2019/03/13/learning-kubernetes-locally-via-minikube-on-manjaro-archlinux/
