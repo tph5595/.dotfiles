@@ -5,7 +5,7 @@ cp ../vim/.vimrc ~/.vimrc
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-vim +PluginInstall +qall
+vim +PlugInstall
 
 cd ~/.vim/bundle/YouCompleteMe
 ./install.py --clang-completer
