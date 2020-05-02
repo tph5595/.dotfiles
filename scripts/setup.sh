@@ -1,5 +1,8 @@
 #!/bin/bash
 
+#setup saving git creds
+git config --global credential.helper store
+
 # Copy .config
 cp -r .config ~/.config
 
