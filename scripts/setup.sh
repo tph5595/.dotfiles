@@ -12,3 +12,9 @@ cd ~/.vim/bundle/YouCompleteMe
 
 #setup zsh
 cp ../zsh/.zshrc ~/.zshrc
+
+mkdir -p ~/repos
+cd ~/repos
+git clone https://github.com/alexanderjeurissen/ranger_devicons
+cd ranger_devicons && make install 
+cd -
