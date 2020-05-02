@@ -1,0 +1,17 @@
+#!/bin/sh
+# vim filetype=sh
+
+cp -r ~/.zshrc ~/dotfiles/zsh/
+cp -r ~/.vimrc ~/dotfiles/vim/.vimrc
+cp -r ~/.config/bspwm ~/dotfiles/.config/bspwm
+cp -r ~/.config/budgie-desktop ~/dotfiles/.config/budgie-desktop
+cp -r ~/.config/budgie-extras ~/dotfiles/.config/budgie-extras
+cp -r ~/.config/budgie-welcome ~/dotfiles/.config/budgie-welcome
+cp -r ~/.config/mpv ~/dotfiles/.config/mpv
+cp -r ~/.config/plank ~/dotfiles/.config/plank
+cp -r ~/.config/polybar/config ~/dotfiles/.config/polybar/config
+cp -r ~/.config/qalculate/qalc.cfg ~/dotfiles/.config/qalculate/qalc.cfg
+cp -r ~/.config/ranger ~/dotfiles/.config/ranger
+cp -r ~/.config/sxhkd/sxhkdrc ~/dotfiles/.config/sxhkd/sxhkdrc
+cp -r ~/.config/update-notifier ~/dotfiles/.config/update-notifier
+cp -r ~/.config/zathura/zathurarc ~/dotfiles/.config/zathura/zathurarc
