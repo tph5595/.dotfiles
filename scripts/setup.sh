@@ -7,8 +7,12 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
 
 vim +PlugInstall
 
-cd ~/.vim/bundle/YouCompleteMe
+cd ~/.vim/plugged/YouCompleteMe
 ./install.py --clang-completer
+
+mkdir -p ${XDG_CONFIG_HOME:=$HOME/.config}
+ln -s ~/.vim $XDG_CONFIG_HOME/nvim
+ln -s ~/.vimrc $XDG_CONFIG_HOME/nvim/init.vim
 
 #setup zsh
 cp ../zsh/.zshrc ~/.zshrc
