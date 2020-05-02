@@ -2,47 +2,45 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call plug#begin('~/.vim/plugged')
 
 " let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+" Plugin 'VundleVim/Vundle.vim'
 
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
-Plugin 'tpope/vim-fugitive'
+Plug 'tpope/vim-fugitive'
 " File tree
-Plugin 'scrooloose/nerdtree'
-" Syntax linting stuff 
-Plugin 'scrooloose/syntastic'
+Plug 'scrooloose/nerdtree'
 " Surround stuff with stuff 
-Plugin 'tpope/vim-surround'
+Plug 'tpope/vim-surround'
 " Pretty colors
-Plugin 'altercation/vim-colors-solarized'
+Plug 'altercation/vim-colors-solarized'
 " Bottom bar beauty
-Plugin 'bling/vim-airline'
+Plug 'bling/vim-airline'
 " Fuzzy Search
-Plugin 'kien/ctrlp.vim'
+Plug 'kien/ctrlp.vim'
 " Autocomplete
-Plugin 'valloric/YouCompleteMe'
+Plug 'valloric/YouCompleteMe'
 " Align stuff
-Plugin 'godlygeek/tabular'
+Plug 'godlygeek/tabular'
 " insert or delete brackets, parens, quotes in pair
-Plugin 'jiangmiao/auto-pairs'
+Plug 'jiangmiao/auto-pairs'
 " tmux integration for vim
-Plugin 'benmills/vimux'
+" Plug 'benmills/vimux'
 " enables repeating other supported plugins with the . command
-Plugin 'tpope/vim-repeat'
+Plug 'tpope/vim-repeat'
 " comment da tings
-Plugin 'tpope/vim-commentary'
+Plug 'tpope/vim-commentary'
 " Good markdown stuff <leader>e for code block editing with syntax highitng in
 " sepereate window
-Plugin 'gabrielelana/vim-markdown'
+Plug 'gabrielelana/vim-markdown'
+" NeovimStuff
+Plug 'neomake/neomake'
+" Icons for vim
+Plug 'ryanoasis/vim-devicons'
 
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
+call plug#end()
 
 " Put your non-Plugin stuff after this line
 
@@ -199,6 +197,20 @@ inoremap <C-k> <Esc>:m .-2<CR>==gi
 vnoremap <C-j> :m '>+1<CR>gv=gv
 vnoremap <C-k> :m '<-2<CR>gv=gv
 
+vnoremap <Leader>u :'<,'>s/\<./\u&/g
+
 map <Leader>l :w<CR> :call VimuxRunCommand("pdflatex *.tex; pdflatex *.tex")<CR>
 
 noremap <Leader>s :setlocal spell! spelllang=en_us<CR> 
+
+" NeoVim Additions
+" https://thoughtbot.com/blog/my-life-with-neovim
+" Run NeoMake on read and write operations
+" autocmd! BufReadPost,BufWritePost * Neomake NEEDED???
+
+" Full config: when writing or reading a buffer, and on changes in insert and
+" normal mode (after 500ms; no delay when writing).
+call neomake#configure#automake('nrwi', 500)
+
+let g:neomake_serialize = 1
+let g:neomake_serialize_abort_on_error = 1
