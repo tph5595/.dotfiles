@@ -16,6 +16,7 @@ ln -s ~/.vimrc $XDG_CONFIG_HOME/nvim/init.vim
 
 #setup zsh
 cp ../zsh/.zshrc ~/.zshrc
+cp ../zsh/.p10k.zsh ~/.p10k.zsh
 
 mkdir -p ~/repos
 cd ~/repos
