@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Copy .config
+cp -r .config ~/.config
+
 # Setup vim
 cp ../vim/.vimrc ~/.vimrc
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
