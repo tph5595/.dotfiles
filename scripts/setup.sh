@@ -13,7 +13,7 @@ curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 vim +PlugInstall
 
-cd ~/.vim/plugged/YouCompleteMe
+cd ~/.config/nvim/plugged/YouCompleteMe
 ./install.py --clang-completer
 
 # Setup zsh
