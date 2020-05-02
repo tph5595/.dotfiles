@@ -218,3 +218,6 @@ let g:neomake_serialize_abort_on_error = 1
 # Load aliases and shortcuts if existent.
 [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/shortcutrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/shortcutrc"
 [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/zshnameddirrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/zshnameddirrc"
+
+" When shortcut files are updated, renew bash and ranger configs with new material:
+       autocmd BufWritePost files,directories,aliases !shortcuts
