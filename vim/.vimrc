@@ -39,6 +39,8 @@ Plug 'gabrielelana/vim-markdown'
 Plug 'neomake/neomake'
 " Icons for vim
 Plug 'ryanoasis/vim-devicons'
+"Golden ratio on spliting
+ Plug 'roman/golden-ratio'
 
 call plug#end()
 
@@ -221,3 +223,9 @@ let g:neomake_serialize_abort_on_error = 1
 
 " When shortcut files are updated, renew bash and ranger configs with new material:
        autocmd BufWritePost files,directories,aliases !shortcuts
+map <Leader>t <Esc>:belowright sp term://zsh<CR>
+" map <Leader>o :PlugInstall<CR>
+
+" Edit vimr configuration file
+nnoremap <Leader>ve :e ~/.vimrc<CR>
+autocmd BufWritePost .vimrc !source ~/.vimrc
