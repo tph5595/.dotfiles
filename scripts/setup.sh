@@ -14,10 +14,11 @@ mkdir -p ${XDG_CONFIG_HOME:=$HOME/.config}
 ln -s ~/.vim $XDG_CONFIG_HOME/nvim
 ln -s ~/.vimrc $XDG_CONFIG_HOME/nvim/init.vim
 
-#setup zsh
+# Setup zsh
 cp ../zsh/.zshrc ~/.zshrc
 cp ../zsh/.p10k.zsh ~/.p10k.zsh
 
+# Setup Ranger
 mkdir -p ~/repos
 cd ~/repos
 git clone https://github.com/alexanderjeurissen/ranger_devicons
