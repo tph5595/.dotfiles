@@ -137,3 +137,5 @@ alias weka='~/Documents/Research/weka-3-8-4/weka.sh'
 # Load aliases and shortcuts if existent.
 [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/shortcutrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/shortcutrc"
 [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/zshnameddirrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/zshnameddirrc"
+alias vim='nvim'
+alias szsh='source ~/.zshrc'
