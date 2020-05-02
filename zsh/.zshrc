@@ -139,3 +139,4 @@ alias weka='~/Documents/Research/weka-3-8-4/weka.sh'
 [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/zshnameddirrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/zshnameddirrc"
 alias vim='nvim'
 alias szsh='source ~/.zshrc'
+alias upug='sudo apt update && sudo apt upgrade'
