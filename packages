@@ -1,3 +1,0 @@
-cmake zsh vim tmux entr htop python-pip && pip install glances evince pdflatex
-
-#for mac terminal-notifier Caskroom/cask/mactex
