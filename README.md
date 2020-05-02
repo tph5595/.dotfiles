@@ -5,7 +5,7 @@ These are my dotfiles that I use for my workflow.
 
 ## Installation
 
-For initial installtion
+For initial installation
 
 ```bash
 sudo ./install.sh
