@@ -9,6 +9,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-fugitive'
 " File tree
 Plug 'scrooloose/nerdtree'
+" git for file tree
+Plug 'Xuyuanp/nerdtree-git-plugin'
 " Surround stuff with stuff 
 Plug 'tpope/vim-surround'
 " Pretty colors
@@ -213,10 +215,6 @@ call neomake#configure#automake('nrwi', 500)
 
 let g:neomake_serialize = 1
 let g:neomake_serialize_abort_on_error = 1
-
-# Load aliases and shortcuts if existent.
-[ -f "${XDG_CONFIG_HOME:-$HOME/.config}/shortcutrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/shortcutrc"
-[ -f "${XDG_CONFIG_HOME:-$HOME/.config}/zshnameddirrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/zshnameddirrc"
 
 " When shortcut files are updated, renew bash and ranger configs with new material:
        autocmd BufWritePost files,directories,aliases !shortcuts

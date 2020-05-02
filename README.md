@@ -1,4 +1,4 @@
-# dotfiles
+# My dotfiles
 ## Overview
 
 These are my dotfiles that I use for my workflow. 
