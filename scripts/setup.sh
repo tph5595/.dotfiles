@@ -19,6 +19,7 @@ cd ~/.config/nvim/plugged/YouCompleteMe
 # Setup zsh
 cp ../zsh/.zshrc ~/.zshrc
 cp ../zsh/.p10k.zsh ~/.p10k.zsh
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
 # Setup Ranger
 mkdir -p ~/repos
