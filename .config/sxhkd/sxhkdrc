@@ -1,13 +1,17 @@
 #
 # wm independent hotkeys
 #
+# Programmer Dvorak/QWERTY switch
+super + k
+      ~/Documents/automation/kb_toggle.sh
+
 
 # terminal emulator
 super + Return
 	st
 
 # program launcher
-super + @space
+super + d
 	dmenu_run
 
 # program launcher
@@ -123,3 +127,4 @@ super + alt + shift + {h,j,k,l}
 # move a floating window
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
+
