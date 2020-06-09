@@ -144,5 +144,5 @@ alias szsh='source ~/.zshrc'
 alias upug='sudo apt update && sudo apt upgrade'
 
 # FZF support
-/usr/share/fzf/completion.zsh
-/usr/share/fzf/key-bindings.zsh
+source /usr/share/doc/fzf/examples/completion.zsh
+source /usr/share/doc/fzf/examples/key-bindings.zsh
