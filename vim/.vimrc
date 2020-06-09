@@ -18,9 +18,14 @@ Plug 'altercation/vim-colors-solarized'
 " Bottom bar beauty
 Plug 'bling/vim-airline'
 " Fuzzy Search
-Plug 'kien/ctrlp.vim'
+" Plug 'kien/ctrlp.vim'
+"https://www.chrisatmachine.com/Neovim/08-fzf/
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'airblade/vim-rooter'
 " Autocomplete
-Plug 'valloric/YouCompleteMe'
+" Plug 'valloric/YouCompleteMe'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Align stuff
 Plug 'godlygeek/tabular'
 " insert or delete brackets, parens, quotes in pair
@@ -218,9 +223,57 @@ let g:neomake_serialize_abort_on_error = 1
 
 " When shortcut files are updated, renew bash and ranger configs with new material:
        autocmd BufWritePost files,directories,aliases !shortcuts
-map <Leader>t <Esc>:belowright sp term://zsh<CR>
+map <Leader>te <Esc>:belowright sp term://zsh<CR>
 " map <Leader>o :PlugInstall<CR>
 
 " Edit vimr configuration file
 nnoremap <Leader>ve :e ~/.vimrc<CR>
 " autocmd BufWritePost .vimrc !source ~/.config/nvim/init.vim
+
+" Coc Settings
+" TextEdit might fail if hidden is not set.
+set hidden
+
+" Some servers have issues with backup files, see #649.
+set nobackup
+set nowritebackup
+
+" " Give more space for displaying messages.
+" set cmdheight=2
+
+
+" Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
+" delays and poor user experience.
+set updatetime=300
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+" fun! GoYCM()
+"       nnoremap <buffer> <silent> <leader>gd :YcmCompleter GoTo<CR>
+"       nnoremap <buffer> <silent> <leader>gr :YcmCompleter GoToReferences<CR>
+"       nnoremap <buffer> <silent> <leader>rr :YcmCompleter RefactorRename<CR>
+" endfun
+
+fun! GoCoc()
+      inoremap <buffer> <silent><expr> <TAB>
+                  \ pumvisible() ? "\<C-n>" :
+                  \ <SID>check_back_space() ? "\<TAB>" :
+                  \coc#refresh()
+
+      inoremap <buffer> <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+      inoremap <buffer> <silent><expr> <C-space> coc#refresh()
+
+      "GoTo code navigation.
+      nmap <buffer> <leader>gd <Plug>(coc-definition)
+      nmap <buffer> <leader>gy <Plug>(coc-type-definition)
+      nmap <buffer> <leader>gi <Plug>(coc-implemenation)
+      nmap <buffer> <leader>gr <Plug>(coc-references)
+      nnoremap <buffer> <leader>cr :CocRestart
+endfun
+
+autocmd FileType * :call GoCoc()
+
+source $HOME/.config/nvim/plug-config/fzf.init
