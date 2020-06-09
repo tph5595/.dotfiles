@@ -142,3 +142,7 @@ alias weka='~/Documents/Research/weka-3-8-4/weka.sh'
 alias vim='nvim'
 alias szsh='source ~/.zshrc'
 alias upug='sudo apt update && sudo apt upgrade'
+
+# FZF support
+/usr/share/fzf/completion.zsh
+/usr/share/fzf/key-bindings.zsh
