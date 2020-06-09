@@ -4,4 +4,4 @@ if [[ $EUID -ne 0 ]]; then
    exit 1
 fi
 
-cd scripts && ./packages.sh && ./update.sh && cd -
+cd scripts && ./packages.sh && ./setup.sh && cd -
