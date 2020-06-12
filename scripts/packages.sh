@@ -7,6 +7,9 @@ pip3 install glances jupyterlab jedi
 # https://www.chrisatmachine.com/Neovim/08-fzf/
 sudo apt install fzf ripgrep universal-ctags silversearcher-ag fd-find
 
+# For dwm
+sudo apt install libx11-dev libxft-devlibxinerama-dev
+
 # Install ZSH
 
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
