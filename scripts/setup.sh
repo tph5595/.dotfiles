@@ -38,3 +38,6 @@ cd ~/dotfiles
 
 # Setup zathura
 cp -r ~/dotfiles/.config/zahura ~/.config
+
+# Setup dwm
+sudo cp ~/dotfiles/dwm.desktop /usr/share/xsessions/dwm.desktop
