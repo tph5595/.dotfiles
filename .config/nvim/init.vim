@@ -44,8 +44,6 @@ Plug 'gabrielelana/vim-markdown'
 Plug 'neomake/neomake'
 " Icons for vim
 Plug 'ryanoasis/vim-devicons'
-"Golden ratio on spliting
-Plug 'roman/golden-ratio'
 
 call plug#end()
 
