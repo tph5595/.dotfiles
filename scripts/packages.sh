@@ -1,7 +1,7 @@
 #!/bin/sh
 sudo apt install cmake zsh neovim tmux entr htop python3-pip evince \
 texlive-full glibc-doc manpages-posix-dev pandoc zathura ranger curl nodejs feh \
-qalc
+qalc suckless-tools
 pip3 install glances jupyterlab jedi
 
 # https://www.chrisatmachine.com/Neovim/08-fzf/
