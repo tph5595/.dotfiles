@@ -27,7 +27,7 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 git clone https://github.com/supercrabtree/k $ZSH_CUSTOM/plugins/k
 
 # Setup Ranger
-cp -r ~/dotfiles/.config/ranger ~/.config
+# cp -r ~/dotfiles/.config/ranger ~/.config
 git clone https://github.com/alexanderjeurissen/ranger_devicons ~/.config/ranger/plugins/ranger_devicons
 
 # Install Nerd Fonts
