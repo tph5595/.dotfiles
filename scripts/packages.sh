@@ -8,7 +8,7 @@ pip3 install glances jupyterlab jedi
 sudo apt install fzf ripgrep universal-ctags silversearcher-ag fd-find
 
 # For dwm
-sudo apt install libx11-dev libxft-devlibxinerama-dev
+sudo apt install libx11-dev libxft-dev libxinerama-dev
 
 # Install ZSH
 
