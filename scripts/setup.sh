@@ -30,6 +30,9 @@ git clone https://github.com/supercrabtree/k $ZSH_CUSTOM/plugins/k
 # cp -r ~/dotfiles/.config/ranger ~/.config
 git clone https://github.com/alexanderjeurissen/ranger_devicons ~/.config/ranger/plugins/ranger_devicons
 
+# Setup dwm
+sudo cp ../dwm.desktop /usr/share/xsessions/dwm.desktop
+
 # Install Nerd Fonts
 mkdir -p ~/repos
 cd ~/repos
@@ -39,7 +42,4 @@ cd nerd-fonts
 cd ~/dotfiles
 
 # Setup zathura
-cp -r ~/dotfiles/.config/zahura ~/.config
-
-# Setup dwm
-sudo cp ~/dotfiles/dwm.desktop /usr/share/xsessions/dwm.desktop
+# cp -r ~/dotfiles/.config/zahura ~/.config
