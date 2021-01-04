@@ -8,10 +8,12 @@ cp -r ../.config/* ~/.config/
 
 # Setup vim
 cp ../vim/.vimrc ~/.vimrc
-mkdir -p ${XDG_CONFIG_HOME:=$HOME/.config}
-mkdir $XDG_CONFIG_HOME/nvim/
-ln -s ~/.vimrc $XDG_CONFIG_HOME/nvim/init.vim
-cp -r ../vim/plug-config $XDG_CONFIG_HOME/nvim/
+
+# Nvim setup through .config dir
+# mkdir -p ${XDG_CONFIG_HOME:=$HOME/.config}
+# mkdir $XDG_CONFIG_HOME/nvim/
+# ln -s ~/.vimrc $XDG_CONFIG_HOME/nvim/init.vim
+# cp -r ../vim/plug-config $XDG_CONFIG_HOME/nvim/
 
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
