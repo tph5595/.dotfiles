@@ -4,7 +4,7 @@
 git config --global credential.helper store
 
 # Copy .config
-cp -r ../.config ~/.config
+cp -r ../.config/* ~/.config/
 
 # Setup vim
 cp ../vim/.vimrc ~/.vimrc
