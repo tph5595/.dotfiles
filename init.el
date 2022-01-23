@@ -1,7 +1,8 @@
 ;;; package ---  summary
 ;;; Commentary:
 ;;; my init.el for Emacs
-
+;;;Update packages list
+(package-refresh-contents)
 ;;; Code:
 (setq inhibit-startup-message t)
 
@@ -187,6 +188,31 @@
   ([remap describe-variable] . counsel-describe-variable)
   ([remap describe-key] . helpful-key))
 
+;; LaTex pretty editing
+(use-package tex
+  :ensure auctex
+)
+
+;; Might need to run to get working: (pdf-tools-install)
+(use-package pdf-tools)
+(setq doc-view-conversion-refresh-interval 1)
+
+(setq TeX-source-correlate-method (quote synctex))
+   (setq TeX-source-correlate-mode t)
+   (setq TeX-source-correlate-start-server t)
+   (setq TeX-view-program-selection '((output-pdf "PDF Tools")))
+   (add-hook 'TeX-after-compilation-finished-functions
+   #'TeX-revert-document-buffer)
+(pdf-tools-install)
+
+
+(setq python-shell-interpreter "ipython3")
+(setq org-confirm-babel-evaluate nil)
+(org-babel-do-load-languages
+'org-babel-load-languages
+'((python . t)))
+
+
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -194,11 +220,9 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
-   (quote
-    ("7661b762556018a44a29477b84757994d8386d6edee909409fabe0631952dad9" default)))
+   '("7661b762556018a44a29477b84757994d8386d6edee909409fabe0631952dad9" default))
  '(package-selected-packages
-   (quote
-    (company-anaconda helpful company-irony company company-mode irony gruvbox-theme ivy-rich which-key rainbow-delimiters evil-nerd-commenter evil-collection evil use-package ivy doom-modeline))))
+   '(auctex company-anaconda helpful company-irony company company-mode irony gruvbox-theme ivy-rich which-key rainbow-delimiters evil-nerd-commenter evil-collection evil use-package ivy doom-modeline)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
