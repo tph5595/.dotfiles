@@ -2,7 +2,7 @@
 
 
 # Install go doc
-go get -v  golang.org/x/tools/cmd/godoc
+go install golang.org/x/tools/cmd/godoc@latest
 # Go def
 go install github.com/rogpeppe/godef@latest
 # Better autocomplete
