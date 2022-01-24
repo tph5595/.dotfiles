@@ -11,3 +11,5 @@ go install github.com/nsf/gocode@latest
 go install honnef.co/go/tools/cmd/staticcheck@latest
 # Error checking
 go install github.com/kisielk/errcheck@latest
+# Remove unneeded type conversions
+go install github.com/mdempsky/unconvert@latest
