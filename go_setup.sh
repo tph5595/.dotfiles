@@ -13,3 +13,5 @@ go install honnef.co/go/tools/cmd/staticcheck@latest
 go install github.com/kisielk/errcheck@latest
 # Remove unneeded type conversions
 go install github.com/mdempsky/unconvert@latest
+# Autoremove unneeded imports
+go install golang.org/x/tools/cmd/goimports@latest
