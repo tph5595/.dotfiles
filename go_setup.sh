@@ -9,3 +9,5 @@ go install github.com/rogpeppe/godef@latest
 go install github.com/nsf/gocode@latest
 # Static code analysis
 go install honnef.co/go/tools/cmd/staticcheck@latest
+# Error checking
+go install github.com/kisielk/errcheck@latest
