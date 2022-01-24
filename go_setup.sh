@@ -6,4 +6,6 @@ go install golang.org/x/tools/cmd/godoc@latest
 # Go def
 go install github.com/rogpeppe/godef@latest
 # Better autocomplete
-go install -u github.com/nsf/gocode@latest
+go install github.com/nsf/gocode@latest
+# Static code analysis
+go install honnef.co/go/tools/cmd/staticcheck@latest
