@@ -1,6 +1,6 @@
 #!/bin/sh
 
-
+# From https://tleyden.github.io/blog/2014/05/22/configure-emacs-as-a-go-editor-from-scratch/
 # Install go doc
 go install golang.org/x/tools/cmd/godoc@latest
 # Go def
