@@ -16,3 +16,6 @@ sudo apt install libx11-dev libxft-dev libxinerama-dev
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 #for mac terminal-notifier Caskroom/cask/mactex
+
+# Install rust
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
