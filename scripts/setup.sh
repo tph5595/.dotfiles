@@ -43,3 +43,5 @@ cd ~/dotfiles
 
 # Setup zathura
 # cp -r ~/dotfiles/.config/zahura ~/.config
+
+git clone https://github.com/supercrabtree/k $ZSH_CUSTOM/plugins/k
