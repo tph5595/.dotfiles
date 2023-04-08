@@ -1,4 +1,7 @@
 #!/bin/sh
+# get up to date nvim
+sudo add-apt-repository ppa:neovim-ppa/unstable
+
 sudo apt install cmake zsh neovim tmux entr htop python3-pip evince \
 texlive-full glibc-doc manpages-posix-dev pandoc zathura ranger curl nodejs feh \
 qalc suckless-tools duplicity nfs-common qjackctl compton qjackctl pulseaudio-module-jack jackd
