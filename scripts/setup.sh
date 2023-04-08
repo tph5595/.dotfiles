@@ -6,18 +6,14 @@ git config --global credential.helper store
 # Copy .config
 cp -r ../.config/* ~/.config/
 
-# Setup vim
-cp ../vim/.vimrc ~/.vimrc
-
 # Nvim setup through .config dir
 # mkdir -p ${XDG_CONFIG_HOME:=$HOME/.config}
 # mkdir $XDG_CONFIG_HOME/nvim/
 # ln -s ~/.vimrc $XDG_CONFIG_HOME/nvim/init.vim
 # cp -r ../vim/plug-config $XDG_CONFIG_HOME/nvim/
 
-curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-vim +PlugInstall
+git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+ ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 
 # Setup zsh
 cp ../zsh/.zshrc ~/.zshrc
