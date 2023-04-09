@@ -3,13 +3,13 @@
 sudo add-apt-repository ppa:neovim-ppa/unstable
 
 sudo apt install cmake zsh neovim tmux entr htop python3-pip evince \
-texlive-full glibc-doc manpages-posix-dev pandoc zathura ranger curl nodejs feh \
-qalc suckless-tools duplicity nfs-common qjackctl compton qjackctl pulseaudio-module-jack jackd
+texlive-full glibc-doc manpages-posix-dev pandoc zathura curl nodejs feh \
+qalc duplicity nfs-common qjackctl compton qjackctl pulseaudio-module-jack jackd
 
 pip3 install glances jupyterlab jedi
 
 # https://www.chrisatmachine.com/Neovim/08-fzf/
-sudo apt install fzf ripgrep universal-ctags silversearcher-ag fd-find
+# sudo apt install fzf ripgrep universal-ctags silversearcher-ag fd-find
 
 # For dwm
 sudo apt install libx11-dev libxft-dev libxinerama-dev
