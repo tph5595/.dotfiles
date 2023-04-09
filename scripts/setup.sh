@@ -16,10 +16,10 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
  
 # Oh my tmux setup
-git clone https://github.com/gpakosz/.tmux.git "/path/to/oh-my-tmux"
-mkdir -p "~/.config/tmux"
-ln -s "/path/to/oh-my-tmux/.tmux.conf" "~/.config/tmux/tmux.conf"
-cp "/path/to/oh-my-tmux/.tmux.conf.local" "~/.config/tmux/tmux.conf.local"
+git clone https://github.com/gpakosz/.tmux.git
+mkdir -p ~/.config/tmux
+ln -s .tmux/.tmux.conf ~/.config/tmux/tmux.conf
+cp .tmux/.tmux.conf.local ~/.config/tmux/tmux.conf.local
 
 # Setup zsh
 cp ../zsh/.zshrc ~/.zshrc
