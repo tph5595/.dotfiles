@@ -18,7 +18,7 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 # Oh my tmux setup
 git clone https://github.com/gpakosz/.tmux.git
 mkdir -p ~/.config/tmux
-ln -s .tmux/.tmux.conf ~/.config/tmux/tmux.conf
+ln -s $(pwd)/.tmux/.tmux.conf ~/.config/tmux/tmux.conf
 cp .tmux/.tmux.conf.local ~/.config/tmux/tmux.conf.local
 
 # Setup zsh
