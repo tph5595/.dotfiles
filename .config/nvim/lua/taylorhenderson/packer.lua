@@ -9,17 +9,14 @@ return require('packer').startup(function(use)
 
   use {
 	  'nvim-telescope/telescope.nvim', tag = '0.1.1',
-	  -- or                            , branch = '0.1.x',
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
 
-  use({ 
-	  'rose-pine/neovim', 
-	  as = 'rose-pine', 
-	  config= function() 
-		  vim.cmd('colorscheme rose-pine')
-	  end
+  use({
+	  'rose-pine/neovim',
+	  as = 'rose-pine',
   })
+  vim.cmd('colorscheme rose-pine')
 
   use( 'nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
   use('theprimeagen/harpoon')
@@ -48,5 +45,25 @@ return require('packer').startup(function(use)
 		  {'rafamadriz/friendly-snippets'},
 	  }
   }
+  use({
+      "kylechui/nvim-surround",
+      tag = "*", -- Use for stability; omit to use `main` branch for the latest features
+      config = function()
+          require("nvim-surround").setup({
+              -- Configuration here, or leave empty to use defaults
+          })
+      end
+  })
+  -- Align stuff
+use('godlygeek/tabular')
+-- insert or delete brackets, parens, quotes in pair
+use('jiangmiao/auto-pairs')
+-- enables repeating other supported plugins with the . command
+use('tpope/vim-repeat')
+-- comment da tings
+use('tpope/vim-commentary')
+-- Good markdown stuff <leader>e for code block editing with syntax highitng in
+-- sepereate window
+use('gabrielelana/vim-markdown')
 
 end)
