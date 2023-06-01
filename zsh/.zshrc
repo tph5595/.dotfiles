@@ -106,12 +106,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-#
-# # tmux aliases
-# alias ta='tmux attach'
-# alias tls='tmux ls'
-# alias tat='tmux attach -t'
-# alias tns='tmux new-session -s'
+
 
 alias l='ls -lah'
 alias c='clear'
@@ -121,9 +116,6 @@ alias gc='git commit'
 alias gs='git status'
 alias gps='git push'
 alias gpl='git pull'
-
-export PATH=~/go/bin:~/dotfiles/bin:~/secrets/bin:$PATH
-export GOPATH=~/go
 
 export VISUAL=nvim
 export EDITOR="$VISUAL"
@@ -136,13 +128,8 @@ alias weka='~/Documents/Research/weka-3-8-4/weka.sh'
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# Load aliases and shortcuts if existent.
-[ -f "${XDG_CONFIG_HOME:-$HOME/.config}/shortcutrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/shortcutrc"
-[ -f "${XDG_CONFIG_HOME:-$HOME/.config}/zshnameddirrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/zshnameddirrc"
 alias vim='nvim'
 alias szsh='source ~/.zshrc'
 alias upug='sudo apt update && sudo apt upgrade'
 
-# FZF support
-source /usr/share/doc/fzf/examples/completion.zsh
-source /usr/share/doc/fzf/examples/key-bindings.zsh
+alias revealjs='pandoc -t revealjs -s --mathjax -i --variable transition=none --variable controls=false --variable controlsTutorial=false --variable slideNumber=true --variable fragments=false --variable theme=dracula -o '
