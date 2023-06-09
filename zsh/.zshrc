@@ -74,6 +74,7 @@ plugins=(
   git
   zsh-syntax-highlighting
   k
+  zsh-vi-mode
 )
 
 source $ZSH/oh-my-zsh.sh
