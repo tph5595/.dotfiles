@@ -56,8 +56,6 @@ return require('packer').startup(function(use)
   })
   -- Align stuff
 use('godlygeek/tabular')
--- insert or delete brackets, parens, quotes in pair
-use('jiangmiao/auto-pairs')
 -- enables repeating other supported plugins with the . command
 use('tpope/vim-repeat')
 -- comment da tings
