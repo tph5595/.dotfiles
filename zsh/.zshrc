@@ -138,3 +138,4 @@ alias revealjs='pandoc -t revealjs -s --mathjax -i --variable transition=none --
 # else
 #     print "404: ~/.zshrc.local not found."
 # fi
+export PATH="/home/taylor/.local/bin:$PATH"
