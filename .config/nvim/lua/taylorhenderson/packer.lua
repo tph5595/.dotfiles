@@ -55,13 +55,18 @@ return require('packer').startup(function(use)
       end
   })
   -- Align stuff
-use('godlygeek/tabular')
+-- use('godlygeek/tabular')
 -- enables repeating other supported plugins with the . command
 use('tpope/vim-repeat')
 -- comment da tings
 use('tpope/vim-commentary')
--- Good markdown stuff <leader>e for code block editing with syntax highitng in
--- sepereate window
-use('gabrielelana/vim-markdown')
+
+use({'j-hui/fidget.nvim',
+      config = function()
+          require("fidget").setup({
+              -- Configuration here, or leave empty to use defaults
+          })
+      end
+})
 
 end)
