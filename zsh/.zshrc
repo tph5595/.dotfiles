@@ -9,7 +9,7 @@ fi
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/taylor/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -74,8 +74,8 @@ plugins=(
   git
   zsh-syntax-highlighting
   k
+  zsh-vi-mode
 )
-
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -133,3 +133,8 @@ alias szsh='source ~/.zshrc'
 alias upug='sudo apt update && sudo apt upgrade'
 
 alias revealjs='pandoc -t revealjs -s --mathjax -i --variable transition=none --variable controls=false --variable controlsTutorial=false --variable slideNumber=true --variable fragments=false --variable theme=dracula -o '
+# if [ -f ~/.zshrc.local ]; then
+#     source ~/.zshrc.local
+# else
+#     print "404: ~/.zshrc.local not found."
+# fi
