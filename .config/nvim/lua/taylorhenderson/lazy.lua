@@ -11,4 +11,16 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup({import = 'taylorhenderson.plugins'})
+require("lazy").setup('taylorhenderson.plugins',{
+    change_detection = {
+        -- automatically check for config file changes and reload the ui
+        enabled = false,
+    },
+    install = {
+        -- install missing plugins on startup. This doesn't increase startup time.
+        missing = true,
+        -- try to load one of these colorschemes when starting an installation during startup
+        colorscheme = { "rose-pine", "habamax" },
+    },
+}
+)
