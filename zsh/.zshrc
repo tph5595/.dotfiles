@@ -139,3 +139,7 @@ alias revealjs='pandoc -t revealjs -s --mathjax -i --variable transition=none --
 #     print "404: ~/.zshrc.local not found."
 # fi
 export PATH="/home/taylor/.local/bin:$PATH"
+[[ ! -r ~/.opam/opam-init/init.zsh ]] || source ~/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
+
+
+[ -f "/home/taylor/.ghcup/env" ] && source "/home/taylor/.ghcup/env" # ghcup-env
