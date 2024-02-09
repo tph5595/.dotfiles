@@ -1,31 +1,13 @@
-#!/bin/sh
-# get up to date nvim
-sudo add-apt-repository ppa:neovim-ppa/unstable
+#!/bin/bash
+set -euxo pipefail
 
-sudo apt install cmake zsh neovim tmux entr htop python3-pip evince \
-texlive-full glibc-doc manpages-posix-dev pandoc zathura curl nodejs feh \
-qalc duplicity nfs-common qjackctl compton qjackctl pulseaudio-module-jack jackd
-
-pip3 install glances jupyterlab jedi
-
-# https://www.chrisatmachine.com/Neovim/08-fzf/
-# sudo apt install fzf ripgrep universal-ctags silversearcher-ag fd-find
-
-# For dwm
-sudo apt install libx11-dev libxft-dev libxinerama-dev
-
-# Install ZSH
-
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-
-git clone https://github.com/supercrabtree/k $ZSH_CUSTOM/plugins/k
-
-git clone https://github.com/jeffreytse/zsh-vi-mode \
-  $ZSH_CUSTOM/plugins/zsh-vi-mode
-
-#for mac terminal-notifier Caskroom/cask/mactex
+sudo pacman -Syu cmake zsh neovim tmux entr htop python python-pip python-pipx \
+texlive-meta man-pages pandoc zathura curl nodejs wayland sway foot \
+duplicity ripgrep rustup
 
 # Install rust
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+rustup default stable
+
+pipx install glances jupyterlab
+
+#for mac terminal-notifier Caskroom/cask/mactex

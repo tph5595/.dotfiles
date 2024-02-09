@@ -19,9 +19,9 @@ return {
                     "lua_ls",
                     "rust_analyzer",
                     "texlab",
-                    "hls",
+                    -- "hls",
                     "ltex",
-                    "ocamllsp",
+                    -- "ocamllsp",
                     "pylsp",
                 },
                 handlers = {
