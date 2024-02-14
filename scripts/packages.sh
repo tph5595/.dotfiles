@@ -3,7 +3,7 @@ set -euxo pipefail
 
 sudo pacman -Syu cmake zsh neovim tmux entr htop python python-pip python-pipx \
 texlive-meta man-pages pandoc zathura curl nodejs wayland sway foot \
-duplicity ripgrep rustup zenith
+duplicity ripgrep rustup zenith swaylock greetd fuzzel
 
 # Install rust
 rustup default stable
